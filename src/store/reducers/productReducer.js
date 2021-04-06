@@ -41,6 +41,12 @@ const productReducer = (state = initialState, action) => {
           }),
         ],
       };
+    case Actions.RESET_SEARCH:
+      return {
+        ...state,
+        search: '',
+        data: state.sideBarData,
+      };
     case Actions.FILTER_PRODUCT:
       return {
         ...state,

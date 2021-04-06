@@ -61,9 +61,3 @@ strong,
 label {
   font-weight: 600;
 }
-
-.content {
-  padding: 0 81px 81px;
-  display: flex;
-  flex-direction: column;
-}

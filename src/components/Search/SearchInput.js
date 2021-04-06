@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { getProduct, searchProduct } from 'store/actions';
+import { getProduct, resetSearch, searchProduct } from 'store/actions';
 
 import './SearchInput.css';
 
@@ -12,7 +12,7 @@ function SearchInput() {
     if (e.target.value.length > 1) {
       dispatch(searchProduct(e.target.value));
     } else {
-      dispatch(getProduct());
+      dispatch(resetSearch());
     }
   }
 

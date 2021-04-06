@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
+import './App.css';
+
 import { Header, ProducList, SideBar, SubHeader } from 'components';
 import { getMyBasket } from 'store/actions';
 

@@ -1,9 +1,12 @@
-import { Card } from 'components';
-import Pagination from 'components/Pagination/Pagination';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
+import './ProductList.css';
+
 import { getProduct } from 'store/actions';
 import { dataSorting } from 'utils/helpers';
+import { Card } from 'components';
+import Pagination from 'components/Pagination/Pagination';
 
 const postsPerPage = 12;
 
@@ -31,7 +34,7 @@ function ProducList() {
 
   return (
     <>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <div className="product-list">
         {currentPosts.map((product) => (
           <Card data={product} key={product.productId} onClick={(res) => {}} />
         ))}
