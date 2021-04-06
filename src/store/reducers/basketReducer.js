@@ -14,7 +14,7 @@ const basketReducer = (state = initialState, action) => {
     case Actions.ADD_TO_CART:
       return {
         ...state,
-        data: [...state.data, action.payload],
+        data: [action.payload, ...state.data],
       };
     case Actions.DELETE_CART:
       return {
