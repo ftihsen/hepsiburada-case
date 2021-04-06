@@ -4,7 +4,15 @@ import PropTypes from 'prop-types';
 import './Modal.css';
 import { Button } from 'components';
 
-function Modal({ open, onClickCancel, onClickSuccess, headerTitle, contentText, onDismiss }) {
+function Modal({
+  open,
+  onClickCancel,
+  onClickSuccess,
+  headerTitle,
+  contentText,
+  onDismiss,
+  children,
+}) {
   const classNames = ['modal'];
   const modalRef = useRef();
   open && classNames.push(`modal-open`);
@@ -22,17 +30,13 @@ function Modal({ open, onClickCancel, onClickSuccess, headerTitle, contentText, 
     }
   };
 
-  console.log(modalRef);
-
   return (
     <div className={classNames.join(' ')}>
       <div className="modal-content" ref={modalRef}>
         <div className="modal-header">
           <p className="modal-header-text">{headerTitle}</p>
         </div>
-        <div className="modal-body">
-          <p className="modal-body-text">{contentText}</p>
-        </div>
+        <div className="modal-body">{children}</div>
         <div className="modal-footer">
           <Button classes="small success" onClick={onClickSuccess}>
             Evet
@@ -53,6 +57,7 @@ Modal.propTypes = {
   contentText: PropTypes.string,
   onClickCancel: PropTypes.func,
   onClickSuccess: PropTypes.func,
+  children: PropTypes.node,
 };
 
 export default Modal;

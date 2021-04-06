@@ -13,12 +13,14 @@ function BasketModalCard({ data, onClickDelete }) {
           <p>{data.title}</p>
           <p>{data.categoryName}</p>
         </div>
-        <Button
-          classes="basket-modal_remove"
-          onClick={() => onClickDelete({ ...data, isAddedBasket: false })}
-        >
-          Kaldır
-        </Button>
+        {onClickDelete && (
+          <Button
+            classes="basket-modal_remove"
+            onClick={() => onClickDelete({ ...data, isAddedBasket: false })}
+          >
+            Kaldır
+          </Button>
+        )}
       </div>
     </div>
   );

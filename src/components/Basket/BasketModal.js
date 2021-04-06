@@ -48,7 +48,9 @@ function BasketModal() {
         }}
         onClickCancel={() => setModal({ ...modalDto })}
         onDismiss={() => setModal({ ...modalDto })}
-      />
+      >
+        <BasketModalCard data={modal.data} />
+      </Modal>
     </div>
   );
 }
