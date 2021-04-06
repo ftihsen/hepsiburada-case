@@ -1,0 +1,24 @@
+.Pagination {
+  display: flex;
+  justify-content: flex-start;
+  margin: 34px 0;
+  list-style: none;
+}
+
+.Pagination--link {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  border-radius: 9px;
+  margin-right: 13px;
+  width: 33px;
+  height: 33px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 20px;
+  color: #646464;
+}
+
+.active {
+  border-color: #646464;
+}

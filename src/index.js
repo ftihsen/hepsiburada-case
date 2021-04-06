@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { Provider } from 'react-redux';
+
+import './styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import configureStore from 'store/configureStore';
+import { productList } from 'mocks/productList';
+
+const store = configureStore(undefined);
+
+const data = JSON.parse(window.localStorage.getItem('productList'));
+!data && localStorage.setItem('productList', JSON.stringify(productList));
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );

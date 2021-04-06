@@ -1,0 +1,29 @@
+.CardImage {
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.CardImage img {
+  object-fit: contain;
+}
+
+.CardImage--big-image {
+  width: 254px;
+  height: 339px;
+  transition: height 0.5s;
+}
+
+.CardImage--big-image:hover {
+  height: 465px;
+}
+
+.CardImage--basket-card-image {
+  width: 54px;
+  height: 72px;
+}

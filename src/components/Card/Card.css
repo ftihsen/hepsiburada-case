@@ -1,0 +1,115 @@
+.card {
+  width: 254px;
+  height: 465px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0 7px 24px;
+}
+
+.card .card-action-container {
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  padding: 0 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 332px;
+  width: 100%;
+  transition: height 0.5s;
+}
+
+.image-container {
+  width: 224px;
+  height: 332px;
+  padding: 3px 10px;
+}
+
+.image-container img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+}
+
+.card:hover .card-action-container {
+  height: 465px;
+  border-color: #cdcdcd;
+}
+
+.product-action-button {
+  display: none;
+}
+
+.card:hover .product-action-button {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  padding: 0 5px 20px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-product-info {
+  display: block;
+  padding: 9px 7px 0;
+}
+
+.card:hover .card-product-info {
+  display: none;
+}
+
+.card-product-info .product-title {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: #484848;
+  margin-bottom: 10px;
+}
+
+.card-product-info .product-filter-key {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+  color: #484848;
+}
+.card-product-info .product-filter-value {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #484848;
+  margin: 0 5px;
+}
+
+.productPrice {
+  display: flex;
+  flex-direction: column;
+  margin-top: 13px;
+}
+
+.productPrice-current-price {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+}
+.productPrice-price {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  text-decoration-line: line-through;
+  color: #9b9b9b;
+  margin-right: 4px;
+}
+
+.productPrice-discount-rate {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+  color: #f90000;
+}

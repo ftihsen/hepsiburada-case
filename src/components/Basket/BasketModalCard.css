@@ -1,0 +1,20 @@
+.basketModalCard {
+  display: flex;
+  margin-bottom: 21px;
+}
+
+.basketModalCard--product_info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 10px;
+}
+
+.basketModalCard--product_info p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #484848;
+}

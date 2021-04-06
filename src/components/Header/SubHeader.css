@@ -1,0 +1,22 @@
+.SubHeader--title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 100%;
+  color: #484848;
+}
+
+.SubHeader--subtitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  color: #b0b0b0;
+}
+
+.SubHeader--subtitle_search {
+  margin-left: 5px;
+  color: #484848;
+}
