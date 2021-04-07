@@ -7,7 +7,7 @@ import { Button, CardProductFilters, CardProductPrice, CardProductTitle } from '
 import { useDispatch } from 'react-redux';
 import { addToCart } from 'store/actions';
 
-function Card({ data, onClick }) {
+function Card({ data }) {
   const dispatch = useDispatch();
 
   return (
@@ -44,7 +44,6 @@ function Card({ data, onClick }) {
 
 Card.propTypes = {
   data: PropTypes.object,
-  onClick: PropTypes.func,
 };
 
 export default Card;

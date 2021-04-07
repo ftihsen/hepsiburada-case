@@ -6,12 +6,11 @@ import './styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import configureStore from 'store/configureStore';
-import { productList } from 'mocks/productList';
+import { setFirstData } from 'utils/helpers';
 
 const store = configureStore(undefined);
 
-const data = JSON.parse(window.localStorage.getItem('productList'));
-!data && localStorage.setItem('productList', JSON.stringify(productList));
+setFirstData();
 
 ReactDOM.render(
   <React.StrictMode>

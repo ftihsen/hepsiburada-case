@@ -4,15 +4,7 @@ import PropTypes from 'prop-types';
 import './Modal.css';
 import { Button } from 'components';
 
-function Modal({
-  open,
-  onClickCancel,
-  onClickSuccess,
-  headerTitle,
-  contentText,
-  onDismiss,
-  children,
-}) {
+function Modal({ open, onClickCancel, onClickSuccess, headerTitle, onDismiss, children }) {
   const classNames = ['modal'];
   const modalRef = useRef();
   open && classNames.push(`modal-open`);
@@ -54,7 +46,6 @@ Modal.propTypes = {
   open: PropTypes.bool,
   onDismiss: PropTypes.func,
   headerTitle: PropTypes.string,
-  contentText: PropTypes.string,
   onClickCancel: PropTypes.func,
   onClickSuccess: PropTypes.func,
   children: PropTypes.node,

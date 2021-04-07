@@ -1,3 +1,29 @@
+import { productList } from 'mocks/productList';
+import { asyncLocalStorage } from './asyncLocalStroge';
+
+const setFirstData = async () => {
+  asyncLocalStorage
+    .getItem('productList')
+    .then((res) => JSON.parse(res))
+    .then((product) => {
+      if (!product) {
+        localStorage.setItem('productList', JSON.stringify(productList));
+      } else {
+        asyncLocalStorage
+          .getItem('basket')
+          .then((basket) => JSON.parse(basket))
+          .then((basketData) => unionBy(product, basketData, 'id'))
+          .then((res) => localStorage.setItem('productList', JSON.stringify([...res])));
+      }
+    });
+};
+
+const unionBy = (a, b, p) =>
+  a
+    .filter((aa) => !b.find((bb) => aa[p] === bb[p]))
+    .concat(b)
+    .sort((a, b) => (1 * a[p] > 1 * b[p] ? 1 : 1 * b[p] > 1 * a[p] ? -1 : 0));
+
 const isEqualObj = (a, b) => {
   const objIsEqual = Object.entries(a).toString() === Object.entries(b).toString();
   return objIsEqual;
@@ -28,4 +54,4 @@ const priceFormat = (price) => {
     .replace(currency_symbol, '');
 };
 
-export { isEqualObj, dataSorting, priceFormat };
+export { isEqualObj, dataSorting, priceFormat, setFirstData, unionBy };
