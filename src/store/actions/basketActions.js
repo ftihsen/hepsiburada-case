@@ -6,10 +6,10 @@ export const ADD_TO_CART = 'ADD_TO_CART';
 export const DELETE_CART = 'DELETE_CART';
 
 export function getMyBasket(params) {
-  const basket = JSON.parse(window.localStorage.getItem('basket')).reverse();
+  const basket = JSON.parse(window.localStorage.getItem('basket'));
   return {
     type: GET_MY_BASKET,
-    payload: basket || [],
+    payload: basket ? basket.reverse() : [],
   };
 }
 

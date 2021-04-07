@@ -12,7 +12,7 @@ const setFirstData = async () => {
         asyncLocalStorage
           .getItem('basket')
           .then((basket) => JSON.parse(basket))
-          .then((basketData) => unionBy(product, basketData, 'id'))
+          .then((basketData) => unionBy(product, basketData || [], 'id'))
           .then((res) => localStorage.setItem('productList', JSON.stringify([...res])));
       }
     });
