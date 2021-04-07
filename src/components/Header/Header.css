@@ -1,7 +1,7 @@
 .header {
   padding: 24px 0;
   background-color: white;
-  border-bottom: 1px solid rgb(var(--b6a));
+  border-bottom: 1px solid rgb(219, 219, 219);
 }
 
 .header-inner {

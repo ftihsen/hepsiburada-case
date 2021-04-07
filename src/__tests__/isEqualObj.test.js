@@ -1,4 +1,4 @@
-const { isEqualObj } = require('./helpers');
+const { isEqualObj } = require('../utils/helpers');
 
 test('parity check of objects', () => {
   const dataOne = { id: 1, direction: 'asc', selectorName: 'price', text: 'En Düşük Fiyat' };

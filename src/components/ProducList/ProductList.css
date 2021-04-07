@@ -1,5 +1,11 @@
 .product-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 550px) {
+  .product-list {
+    justify-content: center;
+  }
 }

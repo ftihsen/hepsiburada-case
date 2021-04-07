@@ -1,4 +1,4 @@
-const { priceFormat } = require('./helpers');
+const { priceFormat } = require('../utils/helpers');
 
 test('conversion from number to currency', () => {
   const data = 100.5;

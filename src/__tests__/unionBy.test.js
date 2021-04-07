@@ -1,4 +1,4 @@
-const { unionBy } = require('./helpers');
+const { unionBy } = require('../utils/helpers');
 
 test('merge as uniq name', () => {
   const data = [
