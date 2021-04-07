@@ -17,7 +17,7 @@ function Card({ data }) {
           <img src={`assets/img/product/phone/${data.imgUrl}`} alt={data.title} />
         </div>
         <div className="product-action-button">
-          <span>Apple iPhone 11 Pro </span>
+          <span>{data.title} </span>
           <Button
             disabled={data.isAddedBasket}
             onClick={() => dispatch(addToCart({ ...data, isAddedBasket: true }))}
