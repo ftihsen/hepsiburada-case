@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function CardProductTitle() {
-  return (
-    <p className="product-title">
-      Apple iPhone 11 Pro Maxi Phone 11 Pro Max iPhone 11 (Max 2 Line)...
-    </p>
-  );
+function CardProductTitle({ title }) {
+  return <p className="product-title">{title}</p>;
 }
+
+CardProductTitle.propTypes = {
+  title: PropTypes.string,
+};
 
 export default CardProductTitle;

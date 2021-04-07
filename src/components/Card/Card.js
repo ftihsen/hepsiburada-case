@@ -29,7 +29,7 @@ function Card({ data, onClick }) {
       </div>
 
       <div className="card-product-info">
-        <CardProductTitle />
+        <CardProductTitle title={data.title} />
         <CardProductFilters title="Marka" value={data.brand} />
         <CardProductFilters title="Renk" value={data.color} />
         <CardProductPrice
