@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal Components should match snapshot 1`] = `
+<div>
+  <div
+    class="modal"
+  >
+    <div
+      class="modal-content"
+    >
+      <div
+        class="modal-header"
+      >
+        <p
+          class="modal-header-text"
+        />
+      </div>
+      <div
+        class="modal-body"
+      >
+        <span>
+          Modal
+        </span>
+      </div>
+      <div
+        class="modal-footer"
+      >
+        <button
+          class="button button-small success"
+        >
+          Evet
+        </button>
+        <button
+          class="button button-small error"
+        >
+          Hayır
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
